@@ -14,10 +14,10 @@ const Property = ({ property: { coverPhoto, price, rentFrequency, rooms, title, 
             <Flex flexWrap="wrap" width="420px" p="5" paddingTop="0" justifyContent="flex-start" cursor="pointer">
                 <Box overflow="hidden" h="253px" w="400px" position="relative">
                     <Image
-                        src={coverPhoto ? coverPhoto?.url : DefaultImage}
+                        src={((coverPhoto || {}).url || DefaultImage)}
                         fill
                         sizes="lg"
-                        blurDataURL={coverPhoto ? coverPhoto?.url : DefaultImage}
+                        blurDataURL={((coverPhoto || {}).url || DefaultImage)}
                         alt="house" />
                 </Box>
                 <Box w="full">
