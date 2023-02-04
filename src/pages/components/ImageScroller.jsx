@@ -34,7 +34,7 @@ const RightArrow = () => {
 
 const ImageScrollbar = ({data}) => (
     <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-        {data.map((image) => (
+        {(data || []).map((image) => (
             <Box
                 width="910px"
                 itemID={image.id}
